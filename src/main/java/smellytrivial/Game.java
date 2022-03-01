@@ -118,40 +118,30 @@ public class Game {
     public boolean fueRespuestaCorrecta() {
         if (enCasillaCastigo[jugadorActual]) {
             if (estaSaliendoDeLaCarcel) {
-                System.out.println("Respuesta correcta!!!!");
-                monederos[jugadorActual]++;
-                System.out.println(jugadores.get(jugadorActual)
-                        + " ahora tiene "
-                        + monederos[jugadorActual]
-                        + " monedas doradas.");
-
-                boolean ganador = jugadorNoHaGanado();
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
-
-                return ganador;
+                return respuestaAcertada();
             } else {
-                jugadorActual++;
+                pasarTurno();
                 if (jugadorActual == jugadores.size()) jugadorActual = 0;
                 return true;
             }
-
-
         } else {
 
-            System.out.println("Respuesta correcta!!!!");
-            monederos[jugadorActual]++;
-            System.out.println(jugadores.get(jugadorActual)
-                    + " ahora tiene "
-                    + monederos[jugadorActual]
-                    + " monedas doradas.");
-
-            boolean ganador = jugadorNoHaGanado();
-            jugadorActual++;
-            if (jugadorActual == jugadores.size()) jugadorActual = 0;
-
-            return ganador;
+            return respuestaAcertada();
         }
+    }
+    private boolean respuestaAcertada() {
+        System.out.println("Respuesta correcta!!!!");
+        monederos[jugadorActual]++;
+        System.out.println(jugadores.get(jugadorActual)
+                + " ahora tiene "
+                + monederos[jugadorActual]
+                + " monedas doradas.");
+
+        boolean ganador = jugadorNoHaGanado();
+        pasarTurno();
+        if (jugadorActual == jugadores.size()) jugadorActual = 0;
+
+        return ganador;
     }
 
     public boolean respuestaIncorrecta() {
@@ -175,4 +165,9 @@ public class Game {
                 + " es "
                 + posiciones[jugadorActual];
     }
+
+    private void pasarTurno() {
+        jugadorActual++;
+    }
+
 }

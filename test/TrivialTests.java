@@ -3,10 +3,6 @@ import org.junit.jupiter.api.Test;
 import smellytrivial.Game;
 
 public class TrivialTests {
-    @Test
-    public void true_is_true(){
-        Assertions.assertTrue(false);
-    }
 
     @Test
     public void crear_Game(){
@@ -62,6 +58,25 @@ public class TrivialTests {
         //Assert
         Assertions.assertEquals(expected,actual);
 
+    }
+    @Test
+    public void si_hay_mas_de_6_jugadores(){
+        //Arrange
+        Game sut = new Game();
+        sut.agregar("María");
+        sut.agregar("Juan");
+        sut.agregar("Luis");
+        sut.agregar("Sergio");
+        sut.agregar("Gabi");
+        sut.agregar("Fernando");
+        sut.agregar("Javier");
+
+
+        boolean expected = false;
+        //Act
+        boolean actual = sut.esJugable();
+        //Assert
+        Assertions.assertEquals(expected,actual);
     }
     @Test
     public void sacar_numero_impar_y_salir_de_la_cárcel(){
