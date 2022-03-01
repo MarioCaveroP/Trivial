@@ -63,4 +63,23 @@ public class TrivialTests {
         Assertions.assertEquals(expected,actual);
 
     }
+    @Test
+    public void sacar_numero_impar_y_salir_de_la_cárcel(){
+        Game sut = new Game();
+        sut.agregar("María");
+        sut.agregar("Juan");
+
+        sut.tirarDado(1);
+        sut.respuestaIncorrecta();
+        sut.tirarDado(1);
+        sut.fueRespuestaCorrecta();
+        sut.tirarDado(1);
+
+        String expected = "La nueva posición de María es 2";
+
+        String actual = sut.nuevaPosicionJugador();
+
+        Assertions.assertEquals(expected,actual);
+
+    }
 }

@@ -18,3 +18,10 @@ Creamos el test para probar con 6 jugadores y nos encontramos que hay un error p
 y las monedas se empiezan a guardar en la posición del array 1 y no en la cero, se corrige restando 1 a todas las posiciones
 y limitamos el método esJugable para que solo devuelva true si los jugadores son de 2 a 6.
 El método agregar se modifica para que dependa del método esJugable.
+
+## Problema 3
+
+Se añade la instruccion salir de la carcel en el metodo tirarDado por si saca un numero impar y esta en la carcel
+Creo el test  sacar_numero_impar_y_salir_de_la_cárcel donde se simulara el principio de partida donde
+el jugador 1 va a la cárcel y sale después de sacar un número impar avanzando hasta la casilla
+esperada.
