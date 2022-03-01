@@ -17,7 +17,7 @@ public class GameLauncher {
         juego.agregar("Antonio");
 
         Random rand = new Random();
-
+        if(juego.esJugable()){
         do {
 
             juego.tirarDado(rand.nextInt(5) + 1);
@@ -27,10 +27,9 @@ public class GameLauncher {
             } else {
                 noGanador = juego.fueRespuestaCorrecta();
             }
-
-
-
         } while (noGanador);
-
+    }else{
+            System.out.println("numero de jugadores invalido");
+        }
     }
 }
