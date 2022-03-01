@@ -4,7 +4,6 @@
 
 Extraemos el código duplicado a un único método "nuevaPosicionJugador",
 al que llamamos desde ambos sitios.
-
 Creamos test unitario "si_al_principio_saco_un_1_voy_a_casilla_1"
 
 ## Problema 1
@@ -25,3 +24,8 @@ Se añade la instruccion salir de la carcel en el metodo tirarDado por si saca u
 Creo el test  sacar_numero_impar_y_salir_de_la_cárcel donde se simulara el principio de partida donde
 el jugador 1 va a la cárcel y sale después de sacar un número impar avanzando hasta la casilla
 esperada.
+
+## Problema 4
+
+Como el método JugadorHaGanado es true pero se cumple cuando aún no ha habido jugador cambiamos el nombre del método
+a JugadorNoHaGanado y cambiamos el nombre de la variable noGanador a Ganador
