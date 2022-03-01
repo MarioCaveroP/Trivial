@@ -33,3 +33,7 @@ Para JugadorNoHaGanado, cambiamos el nombre de la variable noGanador a Ganador.
 
 Refactorizamos el proceso de cambiar de jugador en el método pasarTurno y lo reemplazamos donde corresponde
 
+# Problema 6
+
+Extraemos la parte correcta de la pregunta del método fueRespuestaCorrecta y llamamos al nuevo método respuestaAcertada
+Reutilizarlo en la segunda parte del método fueRespuestaCorrecta.
