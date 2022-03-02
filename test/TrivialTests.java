@@ -97,4 +97,15 @@ public class TrivialTests {
         Assertions.assertEquals(expected,actual);
 
     }
+    @Test
+    public void hacer_mas_de_50_preguntas(){
+        Game sut = new Game();
+        sut.agregar("María");
+        sut.agregar("Juan");
+        for (int i = 0;i<52;i++) {
+            sut.tirarDado(4);
+            sut.fueRespuestaCorrecta();
+        }
+
+    }
 }
